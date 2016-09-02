@@ -1,0 +1,20 @@
+cassandra:
+  image: cassandra:2.2
+  container_name: kong-tests-cassandra
+  ports:
+    - "9042:9042"
+
+postgres:
+  image: postgres:9.4
+  container_name: kong-tests-postgres
+  ports:
+    - "5432:5432"
+  environment:
+    - POSTGRES_USER=kong
+    - POSTGRES_DB=kong_tests
+
+redis:
+  image: redis
+  container_name: kong-tests-redis
+  ports:
+    - "6379:6379"
