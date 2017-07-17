@@ -1,5 +1,5 @@
 cassandra:
-  image: cassandra:2.2
+  image: cassandra:3.9
   container_name: kong-tests-cassandra
   ports:
     - "9042:9042"
