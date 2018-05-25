@@ -7,6 +7,9 @@ cassandra:
 postgres:
   build: ./postgres
   container_name: kong-tests-postgres
+  command: postgres -c "config_file=/etc/postgresql/postgresql.conf"
+  volumes:
+    - "$PWD/postgres/postgres.conf:/etc/postgresql/postgresql.conf"
   ports:
     - "5432:5432"
 
