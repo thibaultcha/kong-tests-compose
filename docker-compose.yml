@@ -22,3 +22,10 @@ redis:
   container_name: kong-tests-redis
   ports:
     - "6379:6379"
+
+grpcbin:
+  image: moul/grpcbin
+  container_name: kong-tests-grpcbin
+  ports:
+    - "15002:9000"
+    - "15003:9001"
