@@ -7,6 +7,7 @@ The following containers will be created:
 - kong-tests-cassandra
 - kong-tests-postgres
 - kong-tests-redis
+- kong-tests-grpcbin
 
 ### Usage
 
