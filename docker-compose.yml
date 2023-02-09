@@ -4,7 +4,7 @@ services:
     image: cassandra:3.9
     container_name: kong-tests-cassandra
     ports:
-      - "9042:9042"
+      - "127.0.0.1:9042:9042"
 
   postgres:
     build: ./postgres
@@ -13,7 +13,7 @@ services:
     volumes:
       - "$PWD/postgres/postgres.conf:/etc/postgresql/postgresql.conf"
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     environment:
       - "POSTGRES_USER=postgres"
       - "POSTGRES_PASSWORD=postgres"
@@ -23,11 +23,11 @@ services:
     image: redis
     container_name: kong-tests-redis
     ports:
-      - "6379:6379"
+      - "127.0.0.1:6379:6379"
 
   grpcbin:
     image: moul/grpcbin
     container_name: kong-tests-grpcbin
     ports:
-      - "15002:9000"
-      - "15003:9001"
+      - "127.0.0.1:15002:9000"
+      - "127.0.0.1:15003:9001"
